@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/bin/bash
 
 # NOTE: Add contracts to this array to build them ⬇️
 # IMPORTANT: Just use spaces (_no commas_) between multiple array items (it's a bash convention).
@@ -10,7 +10,7 @@ DIR="${DIR:=./deployments}"
 for i in "${contracts[@]}"
 do
   echo -e "\nBuilding './$i/Cargo.toml'…"
-  cargo contract build --release --quiet --manifest-path $i/Cargo.toml
+  cargo +nightly contract build --release --quiet --manifest-path $i/Cargo.toml
 
   echo "Copying build files to '$DIR/$i/'…"
   mkdir -p $DIR/$i

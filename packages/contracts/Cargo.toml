@@ -2,4 +2,5 @@
 
 members = [
     "greeter",
+    "explora_token"
 ]

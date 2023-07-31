@@ -1,5 +1,5 @@
 [package]
-name = "my_psp34"
+name = "explora_token"
 version = "1.0.0"
 edition = "2021"
 authors = ["The best developer ever"]
@@ -15,7 +15,7 @@ scale-info = { version = "2.6", default-features = false, features = ["derive"],
 openbrush = { tag = "v4.0.0-beta", git = "https://github.com/Brushfam/openbrush-contracts", default-features = false, features = ["psp34"] }
 
 [lib]
-name = "my_psp34"
+name = "explora_token"
 path = "lib.rs"
 
 
