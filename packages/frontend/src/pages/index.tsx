@@ -1,9 +1,5 @@
-import { HomePageTitle } from '@components/home/HomePageTitle'
-import { HomeTopBar } from '@components/home/HomeTopBar'
-import { CenterBody } from '@components/layout/CenterBody'
-import { ChainInfo } from '@components/web3/ChainInfo'
 import { ConnectButton } from '@components/web3/ConnectButton'
-import { GreeterContractInteractions } from '@components/web3/GreeterContractInteractions'
+import { ExploraContractInteractions } from '@components/web3/ExploraContractInteractions'
 import { useInkathon } from '@scio-labs/use-inkathon'
 import type { NextPage } from 'next'
 import { useEffect } from 'react'
@@ -20,24 +16,15 @@ const HomePage: NextPage = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <HomeTopBar />
-
-      <CenterBody tw="mt-20 mb-10 px-5">
-        {/* Title */}
-        <HomePageTitle />
-
+      <div tw="mt-20 mb-10 flex flex-col items-center px-5">
         {/* Connect Wallet Button */}
         <ConnectButton />
 
         <div tw="mt-10 flex w-full flex-wrap items-start justify-center gap-4">
-          {/* Chain Metadata Information */}
-          <ChainInfo />
-
           {/* Greeter Read/Write Contract Interactions */}
-          <GreeterContractInteractions />
+          <ExploraContractInteractions />
         </div>
-      </CenterBody>
+      </div>
     </>
   )
 }
